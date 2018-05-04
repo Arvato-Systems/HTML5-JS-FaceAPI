@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>FaceAPI with JavaScript</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="pagecontroller.js"></script>
+    <script src="faceapiaccess.js"></script>
+    <style>
+        #container {
+            margin: 0px auto;
+            width: 640px;
+            height: 480px;
+            border: 10px #333 solid;
+        }
+        </style>
+</head>
+<body>
+<div style="text-align: center">
+    <input type="button" value="Start Webcam" onclick="PageController.startcam()" />
+    <input type="button" value="Stop Webcam" onclick="PageController.stopcam()" /><br />
+    API-URL: <textarea cols="50" rows="2" id="apiurl">https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect?</textarea><br />
+    API-Key: <textarea cols="50" rows="1" id="apikey"></textarea><br />
+    Analyze frame every <input type="text" value="500" size="6" id="timeframe" />ms<br />
+    <input type="button" value="Start analyze" onclick="PageController.startanalyse()" />
+    <input type="button" value="Stop analyze" onclick="PageController.stopanalyse()" />
+</div>
+
+<div id="container">
+    <video id="videoElement" width="640" height="480" style="display:none" ></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+</div>
+<div>
+
+    
+</div>
+</body>
+</html>
+
